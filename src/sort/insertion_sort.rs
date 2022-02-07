@@ -2,7 +2,11 @@ use crate::sort::Sorter;
 use std::cmp::Ordering;
 
 /// InsertionSort implements the [Sorter](crate::sort::Sorter) trait with the Insertion Sort
-/// algorithm. A brief explanation of the sort:
+/// algorithm.
+///
+/// ## Algorithm
+///
+/// A brief explanation of the sort:
 ///
 /// The algorithm divides the slice into two parts: an already sorted section, at the beginning, and
 /// a potentially unsorted section at the end.
@@ -56,6 +60,12 @@ use std::cmp::Ordering;
 ///
 /// ```
 ///
+/// ## Performance considerations
+///
+/// Insertion sort is _slow_. It is slow mostly because it takes O(n2) in the worst case, and O(n)
+/// in the best case:
+/// - Worst case is a reverse-sorted list, which means all items need to be compared and swapped
+/// - Best case is a sorted list, which means items need to be compared, but never swapped.
 ///
 pub struct InsertionSort {
     ord: Ordering,
