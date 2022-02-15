@@ -1,15 +1,21 @@
 [package]
-name = "tadm"
-version = "0.1.1"
-edition = "2021"
 authors = ["daniel.javorszky@gmail.com"]
-rust-version = "1.58"
 description = "A collection of algorithms and data structures wrote out while reading The Algorithm Design Manual book"
-license = "MIT OR Apache-2.0"
-repository = "https://github.com/djavorszky/tadm"
 documentation = "https://docs.rs/tadm/latest/tadm/"
+edition = "2021"
 homepage = "https://jdan.dev"
+license = "MIT OR Apache-2.0"
+name = "tadm"
+repository = "https://github.com/djavorszky/tadm"
+rust-version = "1.58"
+version = "0.1.1"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+
+[dev-dependencies]
+criterion = {version = "0.3", features = ["html_reports"]}
+
+[[bench]]
+harness = false
+name = "benchmark"

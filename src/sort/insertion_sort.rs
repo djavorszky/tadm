@@ -67,6 +67,7 @@ use std::cmp::Ordering;
 /// - Worst case is a reverse-sorted list, which means all items need to be compared and swapped
 /// - Best case is a sorted list, which means items need to be compared, but never swapped.
 ///
+#[derive(Copy, Clone)]
 pub struct InsertionSort {
     ord: Ordering,
 }

@@ -14,3 +14,7 @@ test:
 # Runs the app
 run:
     cargo run
+
+# Runs the benchmarks
+bench:
+    cargo bench
